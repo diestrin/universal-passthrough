@@ -8,21 +8,24 @@
   "description": "seamless server -> browser DOM replacement for @angular universal",
   "main": "dist/index.server.js",
   "browser": "dist/index.browser.js",
-  "typings": "universal-passthrough.d.ts",
+  "typings": "dist/index.server.d.ts",
   "contributors": [
     "PatrickJS <patrick@angularclass.com>",
     "Shawn Stedman <sstedman@pxwise.com>",
     "Diego Barahona <hi@diegobarahona.com>"
   ],
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "npm run clean && webpack"
+    "clean": "rm -rf ./dist ./ngfactory",
+    "ngc": "ngc -p tsconfig.json",
+    "postngc": "rm -rf ./dist/*.js ./dist/*.map",
+    "build": "npm run clean && npm run ngc && webpack"
   },
   "license": "MIT",
   "devDependencies": {
     "@angular/animations": "4.0.0",
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
+    "@angular/compiler-cli": "4.0.0",
     "@angular/core": "4.0.0",
     "@angular/platform-browser": "4.0.0",
     "@angular/platform-browser-dynamic": "4.0.0",
@@ -32,9 +35,9 @@
     "rxjs": "5.2.0",
     "ts-node": "^2.1.0",
     "typescript": "2.2.1",
-    "zone.js": "0.8.5",
     "webpack": "2.3.1",
-    "webpack-merge": "~0.16.0"
+    "webpack-merge": "~0.16.0",
+    "zone.js": "0.8.5"
   },
   "peerDependencies": {
     "@angular/core": "^4.0.0"

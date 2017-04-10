@@ -2,6 +2,7 @@ node_modules
 npm-debug.log
 *.tgz
 .DS_Store
+ngfactory
 
 # Uncomment this when published on NPM
 # dist

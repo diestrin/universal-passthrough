@@ -11,12 +11,6 @@ var commonConfig = {
     filename: "[name].js",
     libraryTarget: 'commonjs'
   },
-  module: {
-    loaders: [
-      // TypeScript
-      { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] }
-    ],
-  },
   externals: [
     /^@angular(\\|\/)core/,
     /^rxjs\//
@@ -36,6 +30,12 @@ var clientConfig = {
   entry: {
     'index.browser': './src/index.browser'
   },
+  module: {
+    loaders: [
+      // TypeScript
+      { test: /\.ts$/, loaders: ['awesome-typescript-loader'] }
+    ],
+  },
   node: {
     global: true,
     __dirname: true,
@@ -49,6 +49,12 @@ var serverConfig = {
   target: 'node',
   entry: {
     'index.server': './src/index.server'
+  },
+  module: {
+    loaders: [
+      // TypeScript
+      { test: /\.ts$/, loaders: ['awesome-typescript-loader?declaration=true'] }
+    ],
   },
   node: {
     global: true,

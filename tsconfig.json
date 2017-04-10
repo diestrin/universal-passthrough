@@ -5,6 +5,7 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "dist",
     "sourceMap": true,
     "sourceRoot": "src",
     "target": "es5",
@@ -16,6 +17,9 @@
   ],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true
+  },
+  "angularCompilerOptions": {
+    "genDir": "ngfactory"
   },
   "compileOnSave": false,
   "buildOnSave": false,
