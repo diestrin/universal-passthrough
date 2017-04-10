@@ -34,7 +34,7 @@ var commonConfig = {
 var clientConfig = {
   target: 'web',
   entry: {
-    'index.browser': './index.browser'
+    'index.browser': './src/index.browser'
   },
   node: {
     global: true,
@@ -48,7 +48,7 @@ var clientConfig = {
 var serverConfig = {
   target: 'node',
   entry: {
-    'index.server': './index.server'
+    'index.server': './src/index.server'
   },
   node: {
     global: true,

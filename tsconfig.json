@@ -8,14 +8,11 @@
     "sourceMap": true,
     "sourceRoot": "src",
     "target": "es5",
-    "lib": ["es6", "dom"],
-    "rootDirs": [
-      "./"
-    ]
+    "lib": ["es6", "dom"]
   },
   "files": [
-    "index.browser.ts",
-    "index.server.ts"
+    "./src/index.browser.ts",
+    "./src/index.server.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true
