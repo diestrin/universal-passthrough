@@ -9,7 +9,7 @@ var commonConfig = {
   output: {
     path: root('dist'),
     filename: "[name].js",
-    libraryTarget: 'commonjs'
+    libraryTarget: 'umd'
   },
   externals: [
     /^@angular(\\|\/)core/,
@@ -28,7 +28,7 @@ var commonConfig = {
 var clientConfig = {
   target: 'web',
   entry: {
-    'index.browser': './src/index.browser'
+    'index.browser.umd': './src/index.browser'
   },
   module: {
     loaders: [
@@ -48,7 +48,7 @@ var clientConfig = {
 var serverConfig = {
   target: 'node',
   entry: {
-    'index.server': './src/index.server'
+    'index.server.umd': './src/index.server'
   },
   module: {
     loaders: [

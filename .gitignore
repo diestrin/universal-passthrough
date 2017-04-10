@@ -3,6 +3,7 @@ npm-debug.log
 *.tgz
 .DS_Store
 ngfactory
+dist/*.map
 
 # Uncomment this when published on NPM
 # dist
